@@ -1,0 +1,44 @@
+/*colors
+darkblue: #121C4E;
+white: #fff;
+background : linear-gradient(#383372, #1845B8 75%, #2E3869);
+
+*/
+
+
+/*reset*/
+body {
+    background: linear-gradient(#383372, #1845B8 75%, #2E3869);
+    margin: 0;
+}
+
+/*generals*/
+
+header, footer {
+    background: #121C4E;
+    padding: 0.5rem;
+}
+
+/*header*/
+
+.menu {
+    width: 60px;
+    height: 4px;
+    border-radius: 30%;
+    background: #fff;
+}
+
+header nav{
+    width: 0;
+    height: 0;
+    overflow: hidden;
+}
+
+header a, footer a{
+    color: #fff;
+}
+/*header*/
+h1 {
+    color: #fff;
+}
+
