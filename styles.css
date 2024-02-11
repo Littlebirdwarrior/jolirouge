@@ -239,3 +239,16 @@ header a, footer a{
 .petal_2 {
     left: -3.5rem;
 }
+
+/* parchemin*/
+
+.message {
+    width: 40%;
+    background: #EEC684;
+}
+
+.parchemin{
+    position: absolute;
+    bottom: 2rem;
+    z-index: 5
+}
