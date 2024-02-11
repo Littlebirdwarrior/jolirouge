@@ -167,7 +167,7 @@ header a, footer a{
 }
 
 /*TODO :position à modifier en responsive*/
-.pedestrial {
+.pedestrial, .rose {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -177,7 +177,7 @@ header a, footer a{
 .pedestrial .bottom-p {
     width: 16rem;
     /*dans mon systeme, la heigt du pedestrial peut-être modifié*/
-    height: 13rem;
+    height: 8rem;
     z-index: 1;
 }
 
@@ -196,4 +196,46 @@ header a, footer a{
     background: #121C4E;
 }
 
+/*la rose */
 
+.rose {
+    z-index: 2
+}
+
+.cloche {
+    position: absolute;
+    top:-18rem;
+    left: -5rem;
+    z-index: 4;
+}
+
+.rose-fleur{
+    position: absolute;
+    top:-15.8rem;
+    left: -4.2rem;
+    z-index: 3;
+}
+
+/*petal caché*/
+
+/*.petal,*/
+/*.petal_2 {*/
+/*    position: absolute;*/
+/*    top:-14.8rem;*/
+/*    left: 0;*/
+/*}*/
+
+
+.petal,
+.petal_2 {
+    position: absolute;
+    top:-6rem;
+}
+
+.petal {
+    left: 1.5rem;
+}
+
+.petal_2 {
+    left: -3.5rem;
+}
