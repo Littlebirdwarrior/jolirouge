@@ -164,7 +164,7 @@ header a, footer a{
     height: 50%;
 }
 
-/*position à modifier en responsive*/
+/*TODO :position à modifier en responsive*/
 .pedestrial {
     position: absolute;
     top: 50%;
