@@ -10,7 +10,12 @@ background : linear-gradient(#383372, #1845B8 75%, #2E3869);
 
 /*reset*/
 body {
+    /*style*/
+    font-family: "Lily Script One", system-ui;
+    font-weight: 400;
+    font-style: normal;
     background: linear-gradient(#383372, #1845B8 75%, #2E3869);
+    /*reset*/
     margin: 0;
 }
 
@@ -167,7 +172,8 @@ header a, footer a{
 }
 
 /*TODO :position à modifier en responsive*/
-.pedestrial, .rose {
+.pedestrial,
+.rose {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -242,13 +248,39 @@ header a, footer a{
 
 /* parchemin*/
 
-.message {
-    width: 40%;
-    background: #EEC684;
-}
-
 .parchemin{
     position: absolute;
+    left: 50%;
+    transform: translate(-50%);
     bottom: 2rem;
     z-index: 5
 }
+
+.rouleau_1, .rouleau_2{
+    width: 25rem;
+    z-index: 1;
+}
+
+.rouleau_1{
+    margin-bottom: -2.5rem;
+}
+
+.rouleau_2{
+    margin-top: -2.5rem;
+}
+
+.rouleau_img{
+    width: 100%;
+    box-shadow: 0 2px 100px rgba(0, 0, 0, .2);
+}
+
+.message {
+    margin: auto;
+    width: 16rem;
+    height: 15rem;
+    padding: 3rem 2rem;
+    overflow-y: hidden;
+    background: #EEC684;
+}
+
+
