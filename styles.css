@@ -224,26 +224,12 @@ header a, footer a{
 
 /*petal caché*/
 
-/*.petal,*/
-/*.petal_2 {*/
-/*    position: absolute;*/
-/*    top:-14.8rem;*/
-/*    left: 0;*/
-/*}*/
-
-
 .petal,
 .petal_2 {
     position: absolute;
-    top:-6rem;
-}
-
-.petal {
-    left: 1.5rem;
-}
-
-.petal_2 {
-    left: -3.5rem;
+    top:-14.8rem;
+    left: 0;
+    opacity: 0;
 }
 
 /* parchemin*/
@@ -251,13 +237,13 @@ header a, footer a{
 .parchemin{
     position: absolute;
     left: 50%;
-    transform: translate(-50%);
     bottom: 2rem;
+    transform: translate(-50%);
     z-index: 5
 }
 
 .rouleau_1, .rouleau_2{
-    width: 25rem;
+    width: 20rem;
     z-index: 1;
 }
 
@@ -276,11 +262,108 @@ header a, footer a{
 
 .message {
     margin: auto;
-    width: 16rem;
-    height: 15rem;
+    width: 13rem;
     padding: 3rem 2rem;
-    overflow-y: hidden;
     background: #EEC684;
 }
+
+.overflow {
+    height: 8rem;
+    overflow-y: hidden;
+}
+
+.rouleau_2 {
+    position: relative;
+}
+
+.scroll {
+    font-family: "Lily Script One", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.5rem;
+    background: transparent;
+    border:transparent;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index:6;
+}
+
+.down::after,
+.up::after {
+    font-size: 1.8rem;
+    color: #E09323;
+    margin-left: .3rem;
+}
+
+.down::after {
+    content:"↡";
+}
+
+.up::after{
+    content:"↟";
+}
+
+/*animation de la rose */
+
+.fallout {
+    animation: fallout 4s 2s linear infinite reverse;
+    /*animation: fallout 5s cubic-bezier(0.470, 0.000, 0.745, 0.715) infinite reverse;*/
+}
+
+.fallout-2 {
+    animation: fallout 4s 5s linear infinite reverse;
+    /*animation: fallout 5s cubic-bezier(0.470, 0.000, 0.745, 0.715) infinite reverse;*/
+}
+
+@keyframes fallout {
+    0% {
+        -webkit-transform: translateX(0) translateY(8.2rem) rotate(20deg);
+        transform: translateX(0) translateY(8.2rem) rotate(20deg);
+        opacity: 0;
+    }
+    1%{
+        -webkit-transform: translateX(0) translateY(8.2rem) rotate(20deg);
+        transform: translateX(0) translateY(8.2rem) rotate(20deg);
+        opacity: 1;
+        z-index: 4;
+    }
+    25%{
+        -webkit-transform: translateX(-1rem) translateY(5.5rem) rotate(20deg);
+        transform: translateX(-1rem) translateY(5.5rem) rotate(20deg);
+    }
+    35% {
+        -webkit-transform: translateX(1rem) translateY(3.5rem) rotate(-20deg);
+        transform: translateX(1rem) translateY(3.5rem) rotate(-20deg);
+    }
+    55% {
+        -webkit-transform: translateX(-1rem) translateY(.5rem) rotate(20deg);
+        transform: translateX(-1rem) translateY(.5rem) rotate(20deg);
+    }
+    70%{
+        -webkit-transform: translateX(-2rem) translateY(1rem) rotate(-20deg);
+        transform: translateX(-2rem) translateY(1rem) rotate(-20deg);
+        opacity: 1;
+    }
+    99%{
+        -webkit-transform: translateX(-2rem) translateY(1rem) rotate(20deg);
+        transform: translateX(-2rem) translateY(1rem) rotate(20deg);
+        opacity: 1;
+    }
+    100% {
+        -webkit-transform: translateX(-2rem) translateY(1rem) rotate(20deg);
+        transform: translateX(-2rem) translateY(1rem) rotate(20deg);
+        opacity: 0;
+    }
+    /*100% {*/
+    /*    -webkit-transform: translateZ(1.5rem) translateY(-6rem) translateX(-30px);*/
+    /*    transform: translateZ(1.5rem) translateY(-6rem) translateX(-30px);*/
+    /*}*/
+}
+
+
+
+
 
 
