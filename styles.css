@@ -171,7 +171,8 @@ header a, footer a{
     height: 50%;
 }
 
-/*TODO :position à modifier en responsive*/
+/*scene*/
+
 .pedestrial,
 .rose {
     position: absolute;
@@ -232,6 +233,51 @@ header a, footer a{
     opacity: 0;
 }
 
+/*animation de la rose */
+
+.fallout {
+    animation: fallout 4s 2s linear infinite reverse;
+    /*animation: fallout 5s cubic-bezier(0.470, 0.000, 0.745, 0.715) infinite reverse;*/
+}
+
+.fallout-2 {
+    animation: fallout 4s 5s linear infinite reverse;
+    /*animation: fallout 5s cubic-bezier(0.470, 0.000, 0.745, 0.715) infinite reverse;*/
+}
+
+@keyframes fallout {
+    0% {
+        transform: translateX(0) translateY(8.2rem) rotate(20deg);
+        opacity: 0;
+    }
+    1%{
+        transform: translateX(0) translateY(8.2rem) rotate(20deg);
+        opacity: 1;
+        z-index: 4;
+    }
+    25%{
+        transform: translateX(-1rem) translateY(5.5rem) rotate(20deg);
+    }
+    35% {
+        transform: translateX(1rem) translateY(3.5rem) rotate(-20deg);
+    }
+    55% {
+        transform: translateX(-1rem) translateY(.5rem) rotate(20deg);
+    }
+    70%{
+        transform: translateX(-2rem) translateY(1rem) rotate(-20deg);
+        opacity: 1;
+    }
+    99%{
+        transform: translateX(-2rem) translateY(1rem) rotate(20deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(-2rem) translateY(1rem) rotate(20deg);
+        opacity: 0;
+    }
+}
+
 /* parchemin*/
 
 .parchemin{
@@ -287,7 +333,7 @@ header a, footer a{
     top:50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index:6;
+    z-index:10;
 }
 
 .down::after,
@@ -305,64 +351,115 @@ header a, footer a{
     content:"↟";
 }
 
-/*animation de la rose */
+/*Todo: corriger mediaquerie*/
+/* mediaqueries*/
 
-.fallout {
-    animation: fallout 4s 2s linear infinite reverse;
-    /*animation: fallout 5s cubic-bezier(0.470, 0.000, 0.745, 0.715) infinite reverse;*/
+@media (max-width: 800px) and (orientation: portrait) {
+
+    .bottom {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 30%;
+    }
+
+    .pedestrial .bottom-p {
+        width: 16rem;
+        height: 30vh;
+        z-index: 1;
+    }
+
+    .pedestrial,
+    .rose {
+        position: absolute;
+        top: 70%;
+        left: 20%;
+    }
+
+    /* parchemin*/
+
+    .parchemin{
+        position: absolute;
+        left: 75%;
+        bottom: 35%;
+        transform: translate(-50%);
+        z-index: 5
+    }
+
 }
 
-.fallout-2 {
-    animation: fallout 4s 5s linear infinite reverse;
-    /*animation: fallout 5s cubic-bezier(0.470, 0.000, 0.745, 0.715) infinite reverse;*/
+@media (max-width: 1080px) {
+
+    .parchemin{
+        position: absolute;
+        left: 65%;
+        bottom: 35%;
+        transform: translate(-50%);
+        z-index: 5
+    }
+
+    /*TODO: trouver une solution pour les rouleau*/
+    .rouleau_1, .rouleau_2{
+        width: 45rem;
+        height: 3rem;
+        background: #EEC684;
+        z-index: 1;
+    }
+
+    .rouleau_img {
+        display: none;
+    }
+
+    .message {
+        width: 40rem;
+        height: 35vh;
+        padding: 3rem 2rem;
+    }
+
 }
 
-@keyframes fallout {
-    0% {
-        -webkit-transform: translateX(0) translateY(8.2rem) rotate(20deg);
-        transform: translateX(0) translateY(8.2rem) rotate(20deg);
-        opacity: 0;
+@media (max-height: 600px) and (orientation: landscape){
+
+    .scene {
+        display: none;
     }
-    1%{
-        -webkit-transform: translateX(0) translateY(8.2rem) rotate(20deg);
-        transform: translateX(0) translateY(8.2rem) rotate(20deg);
-        opacity: 1;
-        z-index: 4;
+
+    .parch-section {
+        position: absolute;
+        top:0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: #000;
+        z-index: 10;
     }
-    25%{
-        -webkit-transform: translateX(-1rem) translateY(5.5rem) rotate(20deg);
-        transform: translateX(-1rem) translateY(5.5rem) rotate(20deg);
+
+    .parchemin{
+        position: relative;
+        width: 80%;
+        margin: 0;
+        height: fit-content;
     }
-    35% {
-        -webkit-transform: translateX(1rem) translateY(3.5rem) rotate(-20deg);
-        transform: translateX(1rem) translateY(3.5rem) rotate(-20deg);
+
+    .rouleau_1, .rouleau_2{
+        width: 100%;
+        height: 3rem;
+        background: #EEC684;
+        z-index: 1;
     }
-    55% {
-        -webkit-transform: translateX(-1rem) translateY(.5rem) rotate(20deg);
-        transform: translateX(-1rem) translateY(.5rem) rotate(20deg);
+
+    .rouleau_img {
+        display: none;
     }
-    70%{
-        -webkit-transform: translateX(-2rem) translateY(1rem) rotate(-20deg);
-        transform: translateX(-2rem) translateY(1rem) rotate(-20deg);
-        opacity: 1;
+
+    .message {
+        width: 80%;
+        height: fit-content;
+        padding: 2rem;
+        overflow: scroll;
     }
-    99%{
-        -webkit-transform: translateX(-2rem) translateY(1rem) rotate(20deg);
-        transform: translateX(-2rem) translateY(1rem) rotate(20deg);
-        opacity: 1;
-    }
-    100% {
-        -webkit-transform: translateX(-2rem) translateY(1rem) rotate(20deg);
-        transform: translateX(-2rem) translateY(1rem) rotate(20deg);
-        opacity: 0;
-    }
-    /*100% {*/
-    /*    -webkit-transform: translateZ(1.5rem) translateY(-6rem) translateX(-30px);*/
-    /*    transform: translateZ(1.5rem) translateY(-6rem) translateX(-30px);*/
-    /*}*/
+
 }
-
-
 
 
 
