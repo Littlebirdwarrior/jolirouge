@@ -500,6 +500,9 @@ header a, footer a{
     .bottom {
         height: 40%;
     }
+    main{
+        overflow-y: hidden;
+    }
 }
 
 @media (min-height: 1072px) and (orientation: landscape){
