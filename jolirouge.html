@@ -28,28 +28,27 @@
     </nav>
 </header>
 <main>
-    <!--rose-->
-    <section class="scene">
-        <div class="rose">
-            <img class="petal fallout" src="img/petals.svg" alt="le premier petal"/>
-            <img class="petal_2 fallout-2" src="img/petals_2.svg" alt="le deuxième petal"/>
-            <img class="rose-fleur" src="img/rose.svg" alt="la rose éternelle"/>
-            <img class="cloche" src="img/cloche.svg" alt="la cloche"/>
-            <img class="base" src="img/base.svg" alt="la base de cloche"/>
-        </div>
-        <div class="pedestrial">
-            <div class="bottom-p"></div>
-            <div class="top-p"></div>
-        </div>
-        <div class="bottom">
-        </div>
-    </section>
-    <!--parchemin--->
-    <section class="parch_section">
-        <div class="parchemin">
-            <div class="rouleau_1">
-                <span></span>
+    <div class="wrapper">
+        <!--rose-->
+        <section class="scene">
+            <div class="rose">
+                <img class="petal fallout" src="img/petals.svg" alt="le premier petal"/>
+                <img class="petal_2 fallout-2" src="img/petals_2.svg" alt="le deuxième petal"/>
+                <img class="rose-fleur" src="img/rose.svg" alt="la rose éternelle"/>
+                <img class="cloche" src="img/cloche.svg" alt="la cloche"/>
+                <img class="base" src="img/base.svg" alt="la base de cloche"/>
             </div>
+            <div class="pedestrial">
+                <div class="bottom-p"></div>
+                <div class="top-p"></div>
+            </div>
+        </section>
+        <!--parchemin--->
+        <section class="parch_section">
+            <div class="parchemin">
+                <div class="rouleau_1">
+                    <span></span>
+                </div>
                 <div class="message overflow">
                     <p>
                         <span>
@@ -80,12 +79,16 @@
                         </div>
                     </form>
                 </div>
-            <div class="rouleau_2">
-                <span></span>
-                <button id="scroll" class="scroll down">dérouler</button>
+                <div class="rouleau_2">
+                    <span></span>
+                    <button id="scroll" class="scroll down">dérouler</button>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </div>
+
+    <div class="bottom">
+    </div>
 </main>
 <script src="script.js"></script>
 </body>

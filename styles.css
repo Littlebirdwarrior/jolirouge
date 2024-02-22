@@ -397,6 +397,32 @@ header a, footer a{
     }
 }
 
+@media (max-height: 550px) {
+    .rose {
+        display: none;
+    }
+
+    .parchemin {
+        top: 50%;
+        left: 50%;
+        bottom:inherit;
+        transform: translate(-50%, -50%);
+    }
+
+    .rouleau_1, .rouleau_2{
+        width: 80%;
+    }
+    .message {
+        width: 56%;
+        height: 120px;
+        overflow-y:scroll;
+    }
+
+    .scroll {
+        display: none;
+    }
+}
+
 @media (max-width: 400px ){
 
     .rouleau_1, .rouleau_2{
@@ -416,7 +442,7 @@ header a, footer a{
 }
 
 
-@media (min-width: 800px ){
+@media (min-width: 800px) and (orientation: landscape){
     .rouleau_1, .rouleau_2{
         width: 56%;
     }
@@ -426,6 +452,63 @@ header a, footer a{
 }
 
 
+@media (min-width: 1000px) and (min-height: 670px) and (orientation: landscape){
+
+    main{
+        height: 100%;
+    }
+    .wrapper {
+        display: flex;
+        height: 100%;
+        overflow: hidden;
+    }
+    .parch_section, .scene{
+        height: 100%;
+        position: relative;
+    }
+
+    .parch_section{
+        width: 70%;
+    }
+    .scene{
+        width: 30%;
+    }
+    .parchemin {
+        top: 20%;
+        left: 50%;
+        transform: translate(-50%, -20%);
+    }
+
+    .rouleau_1, .rouleau_2{
+        width: 90%;
+    }
+    .message {
+        width: 75%;
+        height: fit-content;
+    }
+
+    .scroll, down{
+        display: none;
+    }
+
+    .bottom {
+        height: 30%;
+    }
+}
+
+@media (min-height: 780px) and (orientation: landscape){
+    .bottom {
+        height: 40%;
+    }
+}
+
+@media (min-height: 1072px) and (orientation: landscape){
+    .parchemin {
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -30%);
+    }
+}
 
 
 
