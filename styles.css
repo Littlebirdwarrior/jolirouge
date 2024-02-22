@@ -211,9 +211,15 @@ header a, footer a{
 
 .cloche {
     position: absolute;
-    top:-18rem;
+    top:-18.2rem;
     left: -5rem;
     z-index: 4;
+}
+
+.base {
+    position: absolute;
+    top:-4.8rem;
+    left: -5rem;
 }
 
 .rose-fleur{
@@ -282,15 +288,46 @@ header a, footer a{
 
 .parchemin{
     position: absolute;
+    width: 100%;
     left: 50%;
     bottom: 2rem;
     transform: translate(-50%);
-    z-index: 5
+    z-index: 5;
 }
 
 .rouleau_1, .rouleau_2{
-    width: 20rem;
-    z-index: 1;
+    width: 73%;
+    margin: auto;
+    height: 5rem;
+    background: #EFC684;
+    border-radius: 50rem;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+    position: relative;
+}
+
+.rouleau_1>span, .rouleau_2>span{
+    background: #DDB376;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: calc(100% - 5rem);
+    z-index: 3;
+}
+
+.rouleau_1>span:after, .rouleau_2>span:after{
+    content:'';
+    background: #4D322A;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 4;
 }
 
 .rouleau_1{
@@ -301,16 +338,11 @@ header a, footer a{
     margin-top: -2.5rem;
 }
 
-.rouleau_img{
-    width: 100%;
-    box-shadow: 0 2px 100px rgba(0, 0, 0, .2);
-}
-
 .message {
     margin: auto;
-    width: 13rem;
+    width: 56%;
     padding: 3rem 2rem;
-    background: #EEC684;
+    background: #DDB376;
 }
 
 .overflow {
@@ -354,7 +386,44 @@ header a, footer a{
 /*Todo: mediaquerie*/
 /* mediaqueries*/
 
+@media (max-height: 670px){
 
+    .rose {
+        top: 60%
+    }
+
+    .pedestrial {
+        display: none;
+    }
+}
+
+@media (max-width: 400px ){
+
+    .rouleau_1, .rouleau_2{
+        width: 20rem;
+    }
+    .message {
+        width: 17rem;
+        max-height: 18rem;
+        overflow-y:scroll;
+    }
+}
+
+@media (max-width:500px ){
+    .message {
+        width: 50%;
+    }
+}
+
+
+@media (min-width: 800px ){
+    .rouleau_1, .rouleau_2{
+        width: 56%;
+    }
+    .message {
+        width: 46%;
+    }
+}
 
 
 
