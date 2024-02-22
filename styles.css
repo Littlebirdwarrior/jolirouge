@@ -351,115 +351,11 @@ header a, footer a{
     content:"↟";
 }
 
-/*Todo: corriger mediaquerie*/
+/*Todo: mediaquerie*/
 /* mediaqueries*/
 
-@media (max-width: 800px) and (orientation: portrait) {
 
-    .bottom {
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-        height: 30%;
-    }
 
-    .pedestrial .bottom-p {
-        width: 16rem;
-        height: 30vh;
-        z-index: 1;
-    }
-
-    .pedestrial,
-    .rose {
-        position: absolute;
-        top: 70%;
-        left: 20%;
-    }
-
-    /* parchemin*/
-
-    .parchemin{
-        position: absolute;
-        left: 75%;
-        bottom: 35%;
-        transform: translate(-50%);
-        z-index: 5
-    }
-
-}
-
-@media (max-width: 1080px) {
-
-    .parchemin{
-        position: absolute;
-        left: 65%;
-        bottom: 35%;
-        transform: translate(-50%);
-        z-index: 5
-    }
-
-    /*TODO: trouver une solution pour les rouleau*/
-    .rouleau_1, .rouleau_2{
-        width: 45rem;
-        height: 3rem;
-        background: #EEC684;
-        z-index: 1;
-    }
-
-    .rouleau_img {
-        display: none;
-    }
-
-    .message {
-        width: 40rem;
-        height: 35vh;
-        padding: 3rem 2rem;
-    }
-
-}
-
-@media (max-height: 600px) and (orientation: landscape){
-
-    .scene {
-        display: none;
-    }
-
-    .parch-section {
-        position: absolute;
-        top:0;
-        left: 0;
-        width: 100%;
-        height: 100vh;
-        background: #000;
-        z-index: 10;
-    }
-
-    .parchemin{
-        position: relative;
-        width: 80%;
-        margin: 0;
-        height: fit-content;
-    }
-
-    .rouleau_1, .rouleau_2{
-        width: 100%;
-        height: 3rem;
-        background: #EEC684;
-        z-index: 1;
-    }
-
-    .rouleau_img {
-        display: none;
-    }
-
-    .message {
-        width: 80%;
-        height: fit-content;
-        padding: 2rem;
-        overflow: scroll;
-    }
-
-}
 
 
 
